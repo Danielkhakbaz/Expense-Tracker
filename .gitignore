@@ -3,7 +3,7 @@
 /.husky/
 
 # build
-/dist
+dist
 
 # vscode settings
 /.vscode/
