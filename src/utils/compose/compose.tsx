@@ -1,5 +1,5 @@
 type Props = {
-  providers: Array<React.JSXElementConstructor<React.PropsWithChildren<any>>>;
+  providers: Array<React.JSXElementConstructor<React.PropsWithChildren>>;
   children: React.ReactNode;
 };
 
