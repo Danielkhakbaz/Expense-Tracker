@@ -6,19 +6,19 @@ import Table from "./components/table/table";
 type Expense = {
   id: number;
   description: string;
-  amount: string;
+  amount: number;
   category: string;
 };
 
 const defaultExpenses = [
-  { id: 0, description: "Milk", amount: "5.00", category: "Groceries" },
-  { id: 1, description: "Eggs", amount: "10.00", category: "Groceries" },
-  { id: 2, description: "Bread", amount: "2.50", category: "Groceries" },
-  { id: 3, description: "Soap", amount: "3.50", category: "Utilities" },
+  { id: 0, description: "Milk", amount: 5.0, category: "Groceries" },
+  { id: 1, description: "Eggs", amount: 10.0, category: "Groceries" },
+  { id: 2, description: "Bread", amount: 2.5, category: "Groceries" },
+  { id: 3, description: "Soap", amount: 3.5, category: "Utilities" },
   {
     id: 4,
     description: "Movie",
-    amount: "10.00",
+    amount: 10.0,
     category: "Entertainment",
   },
 ];

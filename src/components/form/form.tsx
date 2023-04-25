@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 type Expense = {
   id: number;
   description: string;
-  amount: string;
+  amount: number;
   category: string;
 };
 

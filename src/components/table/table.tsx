@@ -1,7 +1,7 @@
 type Expense = {
   id: number;
   description: string;
-  amount: string;
+  amount: number;
   category: string;
 };
 
@@ -40,7 +40,7 @@ const Table = ({ expenses, setExpenses, category }: Props) => {
             {filteredExpenses.map((expense, index) => (
               <tr key={index}>
                 <td>{expense.description}</td>
-                <td>{`${expense.amount}$`}</td>
+                <td>${expense.amount.toFixed(2)}</td>
                 <td>{expense.category}</td>
                 <td>
                   <button
@@ -53,6 +53,20 @@ const Table = ({ expenses, setExpenses, category }: Props) => {
               </tr>
             ))}
           </tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td>
+                $
+                {filteredExpenses
+                  .reduce(
+                    (acc: any, expense: Expense) => acc + expense.amount,
+                    0
+                  )
+                  .toFixed(2)}
+              </td>
+            </tr>
+          </tfoot>
         </table>
       ) : (
         <h4 className="p-2">No Items here :(</h4>
